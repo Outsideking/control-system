@@ -14,3 +14,21 @@ for r in cfg["repos"]:
         build_if_any(r["name"], env)
 
 print("ALL DONE")
+import os
+import subprocess
+import sys
+
+PYTHON37 = os.path.join(os.getcwd(), "venv37_x64", "bin", "python")  # Linux/Mac
+# PYTHON37 = os.path.join(os.getcwd(), "venv37_x64", "Scripts", "python.exe")  # Windows
+
+def run_pipeline_version(repo_name, version="3.7"):
+    if version=="3.7":
+        cmd = [PYTHON37, "simulate_run.py"]
+    else:
+        cmd = [sys.executable, "simulate_run.py"]  # default env
+    print(f"Running {repo_name} with Python {version}...")
+    subprocess.run(cmd)
+
+# Example usage
+run_pipeline_version("myrepo1", version="3.7")
+run_pipeline_version("myrepo2")  # default python
