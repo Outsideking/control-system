@@ -1,0 +1,11 @@
+# สมมติว่า python3.7 อยู่ใน PATH หรือระบุ path เต็ม
+python3.7 -m venv venv37_x64
+
+# เปิดใช้งาน
+venv37_x64\Scripts\activate
+
+# ติดตั้ง dependencies
+pip install pandas plotly flask flask-socketio pdfkit openpyxl
+python3.7 -m venv venv37_x64
+source venv37_x64/bin/activate
+pip install pandas plotly flask flask-socketio pdfkit openpyxl
