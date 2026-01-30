@@ -1,0 +1,5 @@
+# ใช้ Python 3.7 x64 rrun simulate
+source venv37_x64/bin/activate    # Linux/Mac
+# venv37_x64\Scripts\activate     # Windows
+
+python controller.py
