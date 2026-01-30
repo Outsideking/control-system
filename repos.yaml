@@ -1,0 +1,13 @@
+# repos.yaml
+repos:
+  - name: myrepo
+    url: https://github.com/outisdeking/myrepo.git
+    branch: main
+    auth: token
+    tasks: ["pull", "build"]
+
+  - name: core
+    url: git@github.com:outisdeking/core.git
+    branch: main
+    auth: ssh
+    tasks: ["pull"]
