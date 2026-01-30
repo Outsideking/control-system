@@ -1,1 +1,1 @@
-
+def trend_alert(repo, folder): pass
