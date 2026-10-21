@@ -26,7 +26,9 @@ class ScanZaclip:
             
             with open(self.log_file, "a", encoding="utf-8") as f:
                 f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-            
+            """ScanZaclip integration module for data logging."""
+
+
             return {"success": True, "log_entry": entry}
         except Exception as e:
             return {"success": False, "error": str(e)}
