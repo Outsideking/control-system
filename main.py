@@ -304,3 +304,19 @@ if __name__ == "__main__":
     
     else:
         print("❌ เลือกไม่ถูกต้อง — ออกจากระบบ")
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ]
+}
