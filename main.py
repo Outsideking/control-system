@@ -320,3 +320,14 @@ if __name__ == "__main__":
     }
   ]
 }
+@app.route("/control/<name>/<action>")
+def control_by_name(name, action):
+    from controller import control_system
+    reason = request.args.get("reason", "")
+    duration = int(request.args.get("min", 0))
+    return control_system(name, action, reason, duration)
+
+@app.route("/control/list")
+def list_all():
+    from controller import ALL_SYSTEMS, status
+    return {"systems": ALL_SYSTEMS, "status": status()}
