@@ -1,4 +1,21 @@
-# requirements.txt
-pyyaml
-Flask==3.0.0
-gunicorn
+# Web & API
+flask==2.3.3
+flask-socketio==5.3.6
+flask-cors==4.0.0
+python-socketio==5.10.0
+eventlet==0.33.3
+requests==2.31.0
+
+# Data & Reports
+pandas==2.1.4
+openpyxl==3.1.2
+reportlab==4.0.7
+matplotlib==3.8.2
+
+# System & Git
+python-dotenv==1.0.0
+gitpython==3.1.40
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
