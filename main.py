@@ -1,16 +1,10 @@
 from flask import Flask, jsonify
 from datetime import datetime
-
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return jsonify({
-        "status": "ONLINE",
-        "system": "Outsideking Control System",
-        "message": "Main fixed - working 100%",
-        "time": datetime.now().isoformat()
-    })
+    return jsonify({"status": "ONLINE", "system": "Outsideking Control System", "time": datetime.now().isoformat()})
 
 @app.route("/health")
 def health():
