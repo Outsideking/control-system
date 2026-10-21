@@ -16,3 +16,6 @@ def build_if_any(name, env):
         sh(f"cd {name} && npm install && npm run build", env)
     elif os.path.isfile(f"{name}/pyproject.toml"):
         sh(f"cd {name} && pip install -e .", env)
+
+import os
+import subprocess
