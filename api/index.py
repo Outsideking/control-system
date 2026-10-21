@@ -17,3 +17,16 @@ def catch_all(path):
 # สำคัญมากสำหรับ Vercel
 def handler(request):
     return app(request)
+from controller import status, broadcast, send_command
+
+@app.route("/control")
+def control_panel():
+    return status()
+
+@app.route("/control/broadcast/<action>")
+def control_all(action):
+    return broadcast(action)
+
+@app.route("/control/send/<app_name>/<action>")
+def control_one(app_name, action):
+    return send_command(app_name, action)
